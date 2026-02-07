@@ -30,7 +30,15 @@ def load_case_data(filepath: str = "detective_test_data.json") -> Dict[str, Any]
     Returns:
         Dictionary containing all case data
     """
-    with open(filepath, 'r', encoding='utf-8') as f:
+    # Try to find the file
+    path = Path(filepath)
+    
+    # If not found directly, try relative to this script
+    if not path.exists():
+        script_dir = Path(__file__).parent
+        path = script_dir / filepath
+        
+    with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 
