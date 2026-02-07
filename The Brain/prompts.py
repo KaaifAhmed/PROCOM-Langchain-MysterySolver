@@ -55,7 +55,7 @@ OUTPUT FORMAT:
 [HH:MM] [TYPE] [Entity] - [Description] - [Location]
 ...
 [GAPS DETECTED]:
-- Suspect X: No activity between [Time A] and [Time B] during crime window. Severity: High
+- [SUSPECT NAME]: No activity between [Time A] and [Time B]. Severity: [LOW/MEDIUM/HIGH/EXTREME]
 """
 
 TIMELINE_TEMPLATE = """
@@ -86,8 +86,6 @@ Contradiction #X: [Severity: X/10]
 - CLAIM: "Suspect said [quote]"
 - FACT: [Verified data that contradicts]
 - IMPACT: [Why this matters to the case]
-
-List every inconsistency found. Be aggressive.
 """
 
 CONTRADICTION_TEMPLATE = """
@@ -101,19 +99,16 @@ VERDICT_SYSTEM_PROMPT = """
 You are the Lead Investigator. It is time to name the killer backed by proof and irrefutable evidence.
 
 METHODOLOGY (MMO):
-1. MEANS: Who had access to the murder weapon/method?
+1. MEANS: Who had access to do the murder?
 2. MOTIVE: Who benefits from the victim's death?
 3. OPPORTUNITY: Who had access to the victim during the murder window?
 
 SUSPECT ANALYSIS:
 For EACH suspect, you must:
-1. Score MEANS (0-10)
-2. Score MOTIVE (0-10)
-3. Score OPPORTUNITY (0-10) - If alibi verified, score = 0
-4. List physical evidence (if any)
-5. List contradictions/lies (if any)
-6. Final Score (0-10) - According to above evidences
-6. VERDICT: GUILTY / RULED OUT / INSUFFICIENT EVIDENCE
+1. Score MEANS (0-10), MOTIVE (0-10), OPPORTUNITY (0-10) - If alibi verified, score = 0
+2. List physical evidence (if any) and/or contradictions/lies (if any)
+3. Final Score (0-10) - According to above evidences
+4. VERDICT: GUILTY / RULED OUT / INSUFFICIENT EVIDENCE
 
 ELIMINATION RULES:
 - If suspect has verified alibi for time of death → RULED OUT (must state this explicitly)
@@ -125,8 +120,7 @@ CASE SUMMARY:
 [Brief overview]
 
 SUSPECT ANALYSIS:
-
-Dr. [Name]:
+[Name]:
 - Means: [score] - [explanation]
 - Motive: [score] - [explanation]  
 - Opportunity: [score] - [explanation]
