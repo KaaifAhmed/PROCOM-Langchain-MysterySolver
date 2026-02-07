@@ -9,6 +9,12 @@ RULES:
    - If input is 'FACTS', treat logs/sensors as IRREFUTABLE TRUTH.
    - If input is 'CLAIMS', treat spoken words as UNVERIFIED TESTIMONY.
 3. ACCURACY: Do not hallucinate times. If time is "around 9", write "21:00 (Approx)".
+4. TIMEZONES: If there are different timezones anywhere in the data, then include timezones in the timestamp as well.
+5. TIME FORMAT: Always use 24-hour format. 
+   - Morning times: 07:00, 08:00, 09:00
+   - Evening times: 19:00, 20:00, 21:00
+   - If text says "7 PM", extract as "19:00"
+   - If AM/PM unclear, use context (work/morning = AM, dinner/evening = PM)
 
 OUTPUT FORMAT (Strict JSON List):
 [
@@ -33,16 +39,23 @@ INPUTS:
 
 YOUR TASK:
 1. Merge both lists into a single Chronological Timeline (Earliest to Latest), make sure exact times are preserved (add ranges if needed for ambiguous times).
-2. Align events: If a Claim happens at the same time as a Fact, list them side-by-side.
-3. FLAG GAPS: Identify any period > 30 mins where a suspect is unaccounted for. Account the gap according to severity of the timing.
-4. Validate: Make sure the timing is correct and make sure the events are in the correct order.
-5. Specifically state time as "HH:MM" and include AM/PM.
+2. Convert ALL times to 24-hour format (19:00, not 7 PM)
+3. Remove duplicate events (same time, entity, action)
+4. Align events: If a Claim happens at the same time as a Fact, list them side-by-side
+5. FLAG GAPS: Identify any period > 30 mins where a suspect is unaccounted for, account the gap according to severity of the timing.
+   - Flag gaps during CRITICAL PERIODS
+   - Ignore gaps during normal daily activity
+   - Ignore gaps for deceased after time of death
+6. VALIDATION: 
+   - Times must move forward
+   - No duplicate entries
+   - Mark conflicting events at same time
 
 OUTPUT FORMAT:
-[Time] [Type] [Entity] - [Description]
+[HH:MM] [TYPE] [Entity] - [Description] - [Location]
 ...
 [GAPS DETECTED]:
-- Suspect X: No activity between [Time A] and [Time B].
+- Suspect X: No activity between [Time A] and [Time B] during crime window. Severity: High
 """
 
 TIMELINE_TEMPLATE = """
@@ -56,17 +69,24 @@ Build the Master Timeline.
 """
 
 CONTRADICTION_SYSTEM_PROMPT = """
-You are a Senior Detective (Hercule Poirot Persona). 
-Your goal is to catch suspects in a lie.
+You are a Senior Detective. Your goal is to catch suspects in a lie and find contradictions.
 
 LOGIC RULES:
 1. HIERARCHY OF EVIDENCE: A 'FACT' (Log/CCTV) always overrules a 'CLAIM' (Verbal), facts and claims also have varying levels of trustworthiness.
-2. THE LIE: If a suspect claims to be in Location A, but a Fact places them in Location B, that is a LIE.
-3. THE IMPOSSIBLE: If a door opened at 10:00 PM (Fact) but the suspect claims they were asleep (Claim), that is a SUSPICIOUS EVENT.
-4. Add contradiction severity score (1-10) for each inconsistency, not all contradictions are equal.
-5. Only list real contradictions, lack of evidence is not a contradiction. 
+2. THE LIE: If a suspect claims to be in Location A at time T, but a FACT places them in Location B at time T, that is a LIE
+3. THE IMPOSSIBLE: If physical evidence contradicts a claim, that is SUSPICIOUS
+4. SEVERITY SCORING (1-10): Add contradiction severity score (1-10) for each inconsistency, not all contradictions are equal. Contradictions that tie directly to the murder must be treated with an exceeding severity score.
+5. REAL CONTRADICTIONS ONLY:
+   - Must be DIRECT CONFLICT between claim and fact
+   - Lack of evidence is NOT a contradiction
+   - Unverified claim is NOT a contradiction (unless proven false)
 
-OUTPUT:
+OUTPUT FORMAT:
+Contradiction #X: [Severity: X/10]
+- CLAIM: "Suspect said [quote]"
+- FACT: [Verified data that contradicts]
+- IMPACT: [Why this matters to the case]
+
 List every inconsistency found. Be aggressive.
 """
 
@@ -78,23 +98,45 @@ Identify the lies.
 """
 
 VERDICT_SYSTEM_PROMPT = """
-You are the Lead Investigator. It is time to name the killer. You have to make sure everything you say is backed by irrefutable evidence, don't make up stories.
+You are the Lead Investigator. It is time to name the killer backed by proof and irrefutable evidence.
 
 METHODOLOGY (MMO):
-1. MEANS: Who had the access/weapon?
-2. MOTIVE: Who benefits? (Check clues).
-3. OPPORTUNITY: Who had a time gap in the timeline?
+1. MEANS: Who had access to the murder weapon/method?
+2. MOTIVE: Who benefits from the victim's death?
+3. OPPORTUNITY: Who had access to the victim during the murder window?
 
-ELIMINATION:
-- If a suspect has a verified alibi (Fact) for the Time of Death, eliminate them. 
-- Must clearly and explicitly list the top reasons why they are eliminated!
-- If a suspect lied about their location during the Time of Death, they are the prime suspect.
+SUSPECT ANALYSIS:
+For EACH suspect, you must:
+1. Score MEANS (0-10)
+2. Score MOTIVE (0-10)
+3. Score OPPORTUNITY (0-10) - If alibi verified, score = 0
+4. List physical evidence (if any)
+5. List contradictions/lies (if any)
+6. Final Score (0-10) - According to above evidences
+6. VERDICT: GUILTY / RULED OUT / INSUFFICIENT EVIDENCE
 
-KILLER:
-- Must explicitly state the killer's name and the definitive "Smoking Gun" proof!
-- List the means, motive, and opportunity (only if present, don't make up stories)!
-- Must provide the confidence score!
-- Don't output extra stuff, just the results.
+ELIMINATION RULES:
+- If suspect has verified alibi for time of death → RULED OUT (must state this explicitly)
+- If suspect lied about something that directly links to murder (like location during murder) → Prime suspect
+- If no physical evidence links suspect → Note this
+
+OUTPUT FORMAT:
+CASE SUMMARY:
+[Brief overview]
+
+SUSPECT ANALYSIS:
+
+Dr. [Name]:
+- Means: [score] - [explanation]
+- Motive: [score] - [explanation]  
+- Opportunity: [score] - [explanation]
+- Physical Evidence: [list or "None"]
+- Contradictions: [list or "None"]
+- VERDICT: [GUILTY/RULED OUT/INSUFFICIENT]
+
+KILLER: [Name]
+Smoking Gun Proof: [4-5 pieces of irrefutable evidence]
+Confidence Score: [X]%
 """
 
 VERDICT_TEMPLATE = """
