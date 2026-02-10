@@ -1,0 +1,22 @@
+CASE SUMMARY: 
+Dr. Richard Castellano was found dead in his laboratory at BioGenix, with evidence pointing to potassium cyanide poisoning. The investigation has identified several suspects, including Dr. Sarah Chen and Dr. Marcus Reid, with motives and opportunities to commit the crime.
+
+SUSPECT ANALYSIS:
+Dr. Sarah Chen:
+- MMO Analysis: Means [8], Motive [6], Opportunity [9]
+- Alibi: False (claimed to be at yoga class and then home, but keycard logs show her returning to the lab)
+- Evidence/Lies: Fingerprints on the poisoned coffee mug, signed out cyanide the day of the murder, lied about her whereabouts
+- STATUS: SUSPICIOUS
+
+Dr. Marcus Reid:
+- MMO Analysis: Means [4], Motive [9], Opportunity [2]
+- Alibi: Verified (at the Riverside Athletic Club during the time of the murder)
+- Evidence/Lies: No direct evidence linking him to the crime scene, but potential motive and possible manipulation of Dr. Chen
+- STATUS: SUSPICIOUS
+
+FINAL VERDICT:
+KILLER: Dr. Sarah Chen
+SMOKING GUN: The combination of Dr. Chen's fingerprints on the poisoned coffee mug, her access to the cyanide, and her false alibi
+CONFIDENCE: 80%
+
+While Dr. Marcus Reid had a strong motive and may have played a role in manipulating Dr. Chen, the direct evidence points to Dr. Chen as the one who administered the poison. However, further investigation is needed to determine the extent of Reid's involvement and to uncover any potential conspiracy.

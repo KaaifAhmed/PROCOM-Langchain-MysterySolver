@@ -10,6 +10,9 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from validation import clean_output
+from config import ENABLE_CHECKPOINTS, CHECKPOINT_DIR
+from pathlib import Path
+
 
 logger = logging.getLogger(__name__)
 
@@ -105,3 +108,23 @@ def process_chunk_in_parallel(
                 logger.error("Error processing chunk: %s", e)
 
     return all_results
+
+
+def save_checkpoint(filename: str, content: str):
+    """Save intermediate results to the checkpoint directory."""
+    if not ENABLE_CHECKPOINTS:
+        return
+    
+    try:
+        # Create directory if it doesn't exist
+        checkpoint_path = Path(CHECKPOINT_DIR)
+        checkpoint_path.mkdir(parents=True, exist_ok=True)
+        
+        # Save file
+        file_path = checkpoint_path / filename
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        logger.info("Checkpoint saved: %s", file_path)
+    except Exception as e:
+        logger.warning("Failed to save checkpoint %s: %s", filename, e)
+

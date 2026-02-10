@@ -1,0 +1,217 @@
+**Master Timeline**
+
+[07:00] [CLAIMS] Richard Castellano - left for work - home
+[07:00 (Approx)] [FACTS] Dr. Sarah Chen - Left for yoga class - Unknown
+[07:03] [FACTS] Castellano, Richard - ENTER - Main Entrance
+[07:34] [FACTS] Dr. Richard Castellano - Sent email to Dr. Sarah Chen - BioGenix Corporate Email Server
+[07:58] [FACTS] Chen, Sarah - ENTER - Main Entrance
+[08:00] [FACTS] Dr. Patricia Wong - AUTOPSY PERFORMED - Autopsy Room
+[08:15] [FACTS] Williams, Janet - ENTER - Main Entrance
+[08:22] [FACTS] Park, David - ENTER - Main Entrance
+[09:00] [CLAIMS] Dr. Sarah Chen - Had a team meeting - BioGenix lab
+[09:15] [FACTS] Park, David - ENTER - Chemical Storage Room
+[09:15] [FACTS] Dr. Sarah Chen - Responded to Dr. Richard Castellano's email - BioGenix Corporate Email Server
+[09:22] [FACTS] Park, David - SIGN-OUT - Chemical Storage Room
+[09:30] [CLAIMS] Dr. Sarah Chen - Arrived at the lab - BioGenix lab
+[09:30] [CLAIMS] Dr. Marcus Reid - Arrived at the office - BioGenix office
+[09:47] [FACTS] Park, David - EXIT - Chemical Storage Room
+[10:30] [CLAIMS] Dr. Richard Castellano and Dr. Marcus Reid - Had a heated argument - Dr. Castellano's office
+[10:30] [CLAIMS] Dr. Marcus Reid and Dr. Richard Castellano - Had an argument - Dr. Castellano's office
+[10:30] [FACTS] Dr. Sarah Chen - Met with Dr. Richard Castellano in his lab - Dr. Castellano's lab
+[11:22] [FACTS] Dr. Richard Castellano - Responded to Dr. Sarah Chen's email - BioGenix Corporate Email Server
+[12:00] [CLAIMS] Dr. Sarah Chen - Grabbed lunch from the cafeteria - BioGenix cafeteria
+[12:00] [CLAIMS] Dr. Marcus Reid - Had lunch with investors - Marcello's downtown
+[13:15] [CLAIMS] Dr. Sarah Chen - Returned to her station - BioGenix lab
+[14:30] [FACTS] Dr. Sarah Chen - Retrieved potassium cyanide from chemical storage - Lab 3
+[14:33] [FACTS] Chen, Sarah - ENTER - Chemical Storage Room
+[14:38] [FACTS] Chen, Sarah - SIGN-OUT - Chemical Storage Room
+[14:51] [FACTS] Chen, Sarah - EXIT - Chemical Storage Room
+[16:45] [CLAIMS] James Tucker - Interview with Detective Martin - Interview room
+[16:52] [FACTS] Reid, Marcus - EXIT - Main Entrance
+[17:00] [CLAIMS] Dr. Marcus Reid - Had a squash game - Riverside Athletic Club
+[17:43] [FACTS] Williams, Janet - EXIT - Main Entrance
+[17:54] [FACTS] Marcus Reid - Checked in at main entrance - Riverside Athletic Club
+[18:00] [CLAIMS] Richard Castellano - texted Linda Castellano - unknown
+[18:09] [FACTS] Park, David - EXIT - Main Entrance
+[18:22] [FACTS] Dr. Sarah Chen - Sent text message to Melissa - Unknown
+[18:30] [CLAIMS] Kevin Price - arrived at Building C - Building C
+[18:30] [CLAIMS] Dr. Sarah Chen - left Building C - Building C
+[18:30] [CLAIMS] James Tucker - Saw Dr. Castellano in his lab - Dr. Castellano's lab
+[18:31] [FACTS] Price, Kevin - ENTER - Main Entrance
+[18:43] [FACTS] Chen, Sarah - EXIT - Main Entrance
+[18:45] [CLAIMS] Dr. Sarah Chen - Left the building - BioGenix main entrance
+[18:52] [FACTS] Amanda Torres - Signed in for yoga class - Zenith Wellness Center
+[18:51] [FACTS] Melissa - Responded to Dr. Sarah Chen's text message - Unknown
+[18:55] [FACTS] Lisa Anderson - Signed in for yoga class - Zenith Wellness Center
+[18:58] [FACTS] Michael Roberts - Signed in for yoga class - Zenith Wellness Center
+[19:00] [CLAIMS] Dr. Sarah Chen - Attended yoga class - Zenith Wellness Center
+[19:00] [FACTS] Tucker, J. - PATROL - Building C
+[19:00] [FACTS] Price, Kevin - PRESENT - Building C
+[19:01] [FACTS] Jennifer Walsh - Signed in for yoga class - Zenith Wellness Center
+[19:02] [FACTS] Robert Martinez - Signed in for yoga class - Zenith Wellness Center
+[19:03] [FACTS] Sarah Chen - Vehicle entered parking lot - Zenith Wellness Center parking lot
+[19:03] [FACTS] Sarah Chen - Signed in for yoga class - Zenith Wellness Center
+[19:04] [FACTS] David Kim - Signed in for yoga class - Zenith Wellness Center
+[19:08] [FACTS] Emma Thompson - Signed in for yoga class - Zenith Wellness Center
+[19:10] [FACTS] Melissa Hartman - Started yoga class - Zenith Wellness Center
+[19:15] [CLAIMS] Dr. Marcus Reid - Had drinks at the bar - Riverside Athletic Club bar
+[19:42] [FACTS] Marcus Reid - Made bar/restaurant purchase - Riverside Athletic Club
+[19:47] [FACTS] Dr. Marcus Reid - Sent text message to Dr. Sarah Chen - Unknown
+[19:58] [FACTS] Price, Kevin - EXIT - Main Entrance
+[20:15] [CLAIMS] Dr. Sarah Chen - Finished yoga class - Zenith Wellness Center
+[20:17] [FACTS] Sarah Chen - Exited building - Zenith Wellness Center
+[20:19] [FACTS] Sarah Chen - Vehicle departed parking lot - Zenith Wellness Center parking lot
+[20:23] [FACTS] Dr. Sarah Chen - Responded to Dr. Marcus Reid's text message - Unknown
+[20:25] [FACTS] Dr. Marcus Reid - Sent text message to Dr. Sarah Chen - Unknown
+[20:35] [FACTS] Marcus Reid - Made bar/restaurant purchase - Riverside Athletic Club
+[20:45] [CLAIMS] Dr. Sarah Chen - Returned to the building - BioGenix main entrance
+[20:52] [FACTS] Marcus Reid - Checked out at main entrance - Riverside Athletic Club
+[20:54] [FACTS] Marcus Reid - Vehicle exited north lot - Riverside Athletic Club parking lot
+[21:00] [CLAIMS] Linda Castellano - went to bed - home
+[21:00] [CLAIMS] Dr. Marcus Reid - Arrived home - Dr. Reid's home
+[21:35] [FACTS] Dr. Sarah Chen - Sent text message to Dr. Richard Castellano - Unknown
+[21:38] [FACTS] Dr. Richard Castellano - Responded to Dr. Sarah Chen's text message - Unknown
+[21:45] [CLAIMS] Dr. Chen - returned to building - building
+[21:45] [FACTS] Castellano, Richard - DEATH ESTIMATED - Lab 2-B
+[21:47] [FACTS] Chen, Sarah - ENTER - Main Entrance
+[21:53] [FACTS] Chen, Sarah - ENTER - Chemical Storage Room
+[21:55] - GAPS DETECTED: Dr. Sarah Chen - No activity 21:53 - 22:04. (Severity: LOW)
+[22:04] [FACTS] Chen, Sarah - EXIT - Chemical Storage Room
+[22:15] [FACTS] Castellano, Richard - DEATH ESTIMATED - Lab 2-B
+[22:47] [FACTS] Dr. Sarah Chen - Sent text message to Dr. Marcus Reid - Unknown
+[22:49] [FACTS] Dr. Marcus Reid - Responded to Dr. Sarah Chen's text message - Unknown
+[22:51] [FACTS] Dr. Sarah Chen - Sent text message to Dr. Marcus Reid - Unknown
+[23:12] [FACTS] Chen, Sarah - EXIT - Main Entrance
+[23:18] [FACTS] Dr. Sarah Chen - Arrived at residential address - Dr. Chen's home
+[00:00] [FACTS] Tucker, J. - PATROL - Building C
+[00:05] [FACTS] Tucker, J. - EMERGENCY SERVICES NOTIFIED - Lab 2-B
+[00:12] [FACTS] First responders - ARRIVED - Lab 2-B
+[00:15] [FACTS] Tucker, J. - BODY FOUND - Lab 2-B
+[02:47] [FACTS] Dr. Marcus Reid - Sent email to Dr. Richard Castellano - BioGenix Corporate Email Server
+[06:34] [FACTS] Dr. Chen - Left residential address - Dr. Chen's home
+[06:47] [FACTS] Reid, Marcus - ENTER - Main Entrance
+[07:00 (Approx)] [CLAIMS] Dr. Sarah Chen - Left for yoga class - Unknown
+[07:58] [FACTS] Chen, Sarah - ENTER - Main Entrance
+[08:00] [FACTS] Dr. Patricia Wong - AUTOPSY PERFORMED - Autopsy Room
+[08:15] [FACTS] Williams, Janet - ENTER - Main Entrance
+[08:22] [FACTS] Park, David - ENTER - Main Entrance
+[09:15] [FACTS] Park, David - ENTER - Chemical Storage Room
+[09:15] [FACTS] Dr. Sarah Chen - Responded to Dr. Richard Castellano's email - BioGenix Corporate Email Server
+[09:22] [FACTS] Park, David - SIGN-OUT - Chemical Storage Room
+[09:47] [FACTS] Park, David - EXIT - Chemical Storage Room
+[10:30] [CLAIMS] Dr. Richard Castellano and Dr. Marcus Reid - Had a heated argument - Dr. Castellano's office
+[10:30] [CLAIMS] Dr. Marcus Reid and Dr. Richard Castellano - Had an argument - Dr. Castellano's office
+[10:30] [FACTS] Dr. Sarah Chen - Met with Dr. Richard Castellano in his lab - Dr. Castellano's lab
+[10:45] [FACTS] Dr. Sarah Chen - Left Dr. Castellano's lab - Dr. Castellano's lab
+[11:22] [FACTS] Dr. Richard Castellano - Responded to Dr. Sarah Chen's email - BioGenix Corporate Email Server
+[12:00] [CLAIMS] Dr. Sarah Chen - Grabbed lunch from the cafeteria - BioGenix cafeteria
+[12:00] [CLAIMS] Dr. Marcus Reid - Had lunch with investors - Marcello's downtown
+[13:15] [CLAIMS] Dr. Sarah Chen - Returned to her station - BioGenix lab
+[14:30] [FACTS] Dr. Sarah Chen - Retrieved potassium cyanide from chemical storage - Lab 3
+[14:33] [FACTS] Chen, Sarah - ENTER - Chemical Storage Room
+[14:38] [FACTS] Chen, Sarah - SIGN-OUT - Chemical Storage Room
+[14:51] [FACTS] Chen, Sarah - EXIT - Chemical Storage Room
+[16:00] [CLAIMS] Dr. Sarah Chen - Saw Dr. Castellano in the hallway - BioGenix lab hallway
+[16:45] [CLAIMS] James Tucker - Interview with Detective Martin - Interview room
+[16:52] [FACTS] Reid, Marcus - EXIT - Main Entrance
+[17:00] [CLAIMS] Dr. Marcus Reid - Had a squash game - Riverside Athletic Club
+[17:43] [FACTS] Williams, Janet - EXIT - Main Entrance
+[17:54] [FACTS] Marcus Reid - Checked in at main entrance - Riverside Athletic Club
+[18:00] [CLAIMS] Richard Castellano - texted Linda Castellano - unknown
+[18:00] [CLAIMS] James Tucker - Started evening patrol - BioGenix building
+[18:09] [FACTS] Park, David - EXIT - Main Entrance
+[18:22] [FACTS] Dr. Sarah Chen - Sent text message to Melissa - Unknown
+[18:30] [CLAIMS] Kevin Price - arrived at Building C - Building C
+[18:30] [CLAIMS] Dr. Sarah Chen - left Building C - Building C
+[18:30] [CLAIMS] James Tucker - Saw Dr. Castellano in his lab - Dr. Castellano's lab
+[18:31] [FACTS] Price, Kevin - ENTER - Main Entrance
+[18:43] [FACTS] Chen, Sarah - EXIT - Main Entrance
+[18:45] [CLAIMS] Dr. Sarah Chen - Left the building - BioGenix main entrance
+[18:52] [FACTS] Amanda Torres - Signed in for yoga class - Zenith Wellness Center
+[18:51] [FACTS] Melissa - Responded to Dr. Sarah Chen's text message - Unknown
+[18:55] [FACTS] Lisa Anderson - Signed in for yoga class - Zenith Wellness Center
+[18:58] [FACTS] Michael Roberts - Signed in for yoga class - Zenith Wellness Center
+[19:00] [CLAIMS] Dr. Sarah Chen - Attended yoga class - Zenith Wellness Center
+[19:00] [FACTS] Tucker, J. - PATROL - Building C
+[19:00] [FACTS] Price, Kevin - PRESENT - Building C
+[19:01] [FACTS] Jennifer Walsh - Signed in for yoga class - Zenith Wellness Center
+[19:02] [FACTS] Robert Martinez - Signed in for yoga class - Zenith Wellness Center
+[19:03] [FACTS] Sarah Chen - Vehicle entered parking lot - Zenith Wellness Center parking lot
+[19:03] [FACTS] Sarah Chen - Signed in for yoga class - Zenith Wellness Center
+[19:04] [FACTS] David Kim - Signed in for yoga class - Zenith Wellness Center
+[19:08] [FACTS] Emma Thompson - Signed in for yoga class - Zenith Wellness Center
+[19:10] [FACTS] Melissa Hartman - Started yoga class - Zenith Wellness Center
+[19:42] [FACTS] Marcus Reid - Made bar/restaurant purchase - Riverside Athletic Club
+[19:47] [FACTS] Dr. Marcus Reid - Sent text message to Dr. Sarah Chen - Unknown
+[19:58] [FACTS] Price, Kevin - EXIT - Main Entrance
+[20:15] [CLAIMS] Dr. Sarah Chen - Finished yoga class - Zenith Wellness Center
+[20:17] [FACTS] Sarah Chen - Exited building - Zenith Wellness Center
+[20:19] [FACTS] Sarah Chen - Vehicle departed parking lot - Zenith Wellness Center parking lot
+[20:23] [FACTS] Dr. Sarah Chen - Responded to Dr. Marcus Reid's text message - Unknown
+[20:25] [FACTS] Dr. Marcus Reid - Sent text message to Dr. Sarah Chen - Unknown
+[20:35] [FACTS] Marcus Reid - Made bar/restaurant purchase - Riverside Athletic Club
+[20:45] [CLAIMS] Dr. Sarah Chen - Returned to the building - BioGenix main entrance
+[20:52] [FACTS] Marcus Reid - Checked out at main entrance - Riverside Athletic Club
+[20:54] [FACTS] Marcus Reid - Vehicle exited north lot - Riverside Athletic Club parking lot
+[21:00] [CLAIMS] Linda Castellano - went to bed - home
+[21:00] [CLAIMS] Dr. Marcus Reid - Arrived home - Dr. Reid's home
+[21:35] [FACTS] Dr. Sarah Chen - Sent text message to Dr. Richard Castellano - Unknown
+[21:38] [FACTS] Dr. Richard Castellano - Responded to Dr. Sarah Chen's text message - Unknown
+[21:45] [CLAIMS] Dr. Chen - returned to building - building
+[21:45] [FACTS] Castellano, Richard - DEATH ESTIMATED - Lab 2-B
+[21:47] [FACTS] Chen, Sarah - ENTER - Main Entrance
+[21:53] [FACTS] Chen, Sarah - ENTER - Chemical Storage Room
+[21:55] - GAPS DETECTED: Dr. Sarah Chen - No activity 21:53 - 22:04. (Severity: LOW)
+[22:04] [FACTS] Chen, Sarah - EXIT - Chemical Storage Room
+[22:15] [FACTS] Castellano, Richard - DEATH ESTIMATED - Lab 2-B
+[22:47] [FACTS] Dr. Sarah Chen - Sent text message to Dr. Marcus Reid - Unknown
+[22:49] [FACTS] Dr. Marcus Reid - Responded to Dr. Sarah Chen's text message - Unknown
+[22:51] [FACTS] Dr. Sarah Chen - Sent text message to Dr. Marcus Reid - Unknown
+[23:12] [FACTS] Chen, Sarah - EXIT - Main Entrance
+[23:18] [FACTS] Dr. Sarah Chen - Arrived at residential address - Dr. Chen's home
+[00:00] [FACTS] Tucker, J. - PATROL - Building C
+[00:05] [FACTS] Tucker, J. - EMERGENCY SERVICES NOTIFIED - Lab 2-B
+[00:12] [FACTS] First responders - ARRIVED - Lab 2-B
+[00:15] [FACTS] Tucker, J. - BODY FOUND - Lab 2-B
+
+**GAPS DETECTED:**
+
+- Dr. Sarah Chen: No activity 21:53 - 22:04. (Severity: LOW)
+- Dr. Sarah Chen: No activity 22:15 - 22:47. (Severity: LOW)
+- Dr. Sarah Chen: No activity 22:49 - 23:12. (Severity: LOW)
+- Dr. Sarah Chen: No activity 23:18 - 00:00. (Severity: LOW)
+- Dr. Richard Castellano: No activity 21:45 - 21:47. (Severity: LOW)
+- Dr. Richard Castellano: No activity 21:53 - 21:55. (Severity: LOW)
+- Dr. Richard Castellano: No activity 22:04 - 22:15. (Severity: LOW)
+- Dr. Richard Castellano: No activity 22:47 - 23:12. (Severity: LOW)
+- Dr. Richard Castellano: No activity 23:18 - 00:00. (Severity: LOW)
+- Dr. Marcus Reid: No activity 21:38 - 21:45. (Severity: LOW)
+- Dr. Marcus Reid: No activity 21:47 - 22:04. (Severity: LOW)
+- Dr. Marcus Reid: No activity 22:15 - 22:47. (Severity: LOW)
+- Dr. Marcus Reid: No activity 22:49 - 23:12. (Severity: LOW)
+- Dr. Marcus Reid: No activity 23:18 - 00:00. (Severity: LOW)
+- James Tucker: No activity 00:05 - 00:12. (Severity: LOW)
+- James Tucker: No activity 00:15 - 00:00. (Severity: LOW)
+- Kevin Price: No activity 19:00 - 19:58. (Severity: LOW)
+- Kevin Price: No activity 20:45 - 21:45. (Severity: LOW)
+- Kevin Price: No activity 21:47 - 22:04. (Severity: LOW)
+- Kevin Price: No activity 22:15 - 23:12. (Severity: LOW)
+- Kevin Price: No activity 23:18 - 00:00. (Severity: LOW)
+- Linda Castellano: No activity 21:00 - 21:45. (Severity: LOW)
+- Linda Castellano: No activity 21:47 - 22:04. (Severity: LOW)
+- Linda Castellano: No activity 22:15 - 23:12. (Severity: LOW)
+- Linda Castellano: No activity 23:18 - 00:00. (Severity: LOW)
+- Melissa: No activity 18:51 - 19:00. (Severity: LOW)
+- Melissa: No activity 20:23 - 20:45. (Severity: LOW)
+- Melissa: No activity 21:47 - 22:04. (Severity: LOW)
+- Melissa: No activity 22:15 - 23:12. (Severity: LOW)
+- Melissa: No activity 23:18 - 00:00. (Severity: LOW)
+- Richard Castellano: No activity 21:45 - 21:47. (Severity: LOW)
+- Richard Castellano: No activity 21:53 - 21:55. (Severity: LOW)
+- Richard Castellano: No activity 22:04 - 22:15. (Severity: LOW)
+- Richard Castellano: No activity 22:47 - 23:12. (Severity: LOW)
+- Richard Castellano: No activity 23:18 - 00:00. (Severity: LOW)
+- Sarah Chen: No activity 21:53 - 22:04. (Severity: LOW)
+- Sarah Chen: No activity 22:15 - 22:47. (Severity: LOW)
+- Sarah Chen: No activity 22:49 - 23:12. (Severity: LOW)
+- Sarah Chen: No activity 23:18 - 00:00. (Severity: LOW)

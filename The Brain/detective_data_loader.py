@@ -55,17 +55,15 @@ def get_audio_text(filepath: str = "detective_test_data.json") -> str:
     data = load_case_data(filepath)
     
     audio_sections = []
-    audio_sections.append("=" * 80)
     audio_sections.append("AUDIO TRANSCRIPTS - WITNESS INTERVIEWS")
-    audio_sections.append("=" * 80)
+    audio_sections.append("")
     audio_sections.append("")
     
     for interview_id, interview_data in data["audio_transcripts"].items():
-        audio_sections.append("-" * 80)
         audio_sections.append(f"INTERVIEW: {interview_id.replace('_', ' ').upper()}")
         audio_sections.append(f"Timestamp: {interview_data['timestamp']}")
         audio_sections.append(f"Duration: {interview_data['duration']}")
-        audio_sections.append("-" * 80)
+        audio_sections.append("")
         audio_sections.append("")
         audio_sections.append(interview_data["transcript"])
         audio_sections.append("")
@@ -89,17 +87,15 @@ def get_documents_text(filepath: str = "detective_test_data.json") -> str:
     data = load_case_data(filepath)
     
     doc_sections = []
-    doc_sections.append("=" * 80)
     doc_sections.append("DOCUMENTS AND RECORDS")
-    doc_sections.append("=" * 80)
+    doc_sections.append("")
     doc_sections.append("")
     
     for doc_id, doc_data in data["documents"].items():
-        doc_sections.append("-" * 80)
         doc_sections.append(f"DOCUMENT: {doc_id.replace('_', ' ').upper()}")
         doc_sections.append(f"Document ID: {doc_data.get('document_id', 'N/A')}")
         doc_sections.append(f"Date: {doc_data.get('date', 'N/A')}")
-        doc_sections.append("-" * 80)
+        doc_sections.append("")
         doc_sections.append("")
         doc_sections.append(doc_data["content"])
         doc_sections.append("")
@@ -120,15 +116,13 @@ def get_clues_text(filepath: str = "detective_test_data.json") -> str:
     data = load_case_data(filepath)
     
     clue_sections = []
-    clue_sections.append("=" * 80)
     clue_sections.append("FINAL CLUES AND EVIDENCE")
-    clue_sections.append("=" * 80)
+    clue_sections.append("")
     clue_sections.append("")
     
     for clue_id, clue_data in data["final_clues"].items():
-        clue_sections.append("-" * 80)
         clue_sections.append(f"EVIDENCE: {clue_id.replace('_', ' ').upper()}")
-        clue_sections.append("-" * 80)
+        clue_sections.append("")
         clue_sections.append("")
         clue_sections.append(clue_data["content"])
         clue_sections.append("")
