@@ -1,0 +1,29 @@
+# --- CORE FRAMEWORK ---
+streamlit
+python-dotenv
+langchain
+langchain-community
+langchain-core
+
+# --- THE BRAIN & VISION (Groq - COMPLIANT) ---
+langchain-groq
+
+# --- THE EAR (Audio Input) ---
+openai-whisper
+numpy
+pydub
+SpeechRecognition
+
+# --- THE MOUTH (Audio Output / Generators) ---
+pyttsx3
+gTTS
+
+# --- UTILITIES ---
+pypdf
+Pillow
+requests
+
+# --- REQUESTED (⚠️ WARNING: DO NOT USE FOR LLM) ---
+openai
+langchain-openai
+tiktoken
