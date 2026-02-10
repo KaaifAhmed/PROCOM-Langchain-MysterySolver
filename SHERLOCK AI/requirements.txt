@@ -1,29 +1,39 @@
-# --- CORE FRAMEWORK ---
+# --- CORE DASHBOARD & APP ---
 streamlit
 python-dotenv
+
+# --- LANGCHAIN ECOSYSTEM ---
 langchain
 langchain-community
 langchain-core
+langchain-text-splitters
 
 # --- THE BRAIN & VISION (Groq - COMPLIANT) ---
 langchain-groq
+groq
 
 # --- THE EAR (Audio Input) ---
+# Note: We are using Groq API for speed, but keeping these for backups
 openai-whisper
 numpy
 pydub
 SpeechRecognition
 
-# --- THE MOUTH (Audio Output / Generators) ---
-pyttsx3
-gTTS
-
-# --- UTILITIES ---
-pypdf
+# --- THE EYE (Vision & PDF Processing) ---
+# 🚨 CRITICAL: 'PyMuPDF' is required for 'import fitz'
+PyMuPDF
 Pillow
 requests
 
-# --- REQUESTED (⚠️ WARNING: DO NOT USE FOR LLM) ---
+# --- THE MOUTH (Audio Output - Optional) ---
+pyttsx3
+gTTS
+
+# --- LEGACY / UTILITIES ---
+pypdf  # Keeping just in case older code needs it
+tiktoken
+
+# --- OPTIONAL / RISKY (OpenAI) ---
+# Only enabled if you flip the switch in dashboard.py
 openai
 langchain-openai
-tiktoken
