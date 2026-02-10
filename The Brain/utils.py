@@ -9,6 +9,7 @@ import os
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from validation import clean_output
 
 logger = logging.getLogger(__name__)
 
@@ -20,13 +21,6 @@ def build_chain(system_prompt: str, template: str, llm):
         ("human", template)
     ])
     return prompt | llm | StrOutputParser()
-
-
-def clean_llm_output(text: str) -> str:
-    """Clean LLM output by removing markdown code fences."""
-    if not isinstance(text, str):
-        return "[]"
-    return text.replace("```json", "").replace("```", "").strip()
 
 
 def split_text_into_chunks(text: str, chunk_size: int, chunk_overlap: int, separators: list) -> list:
@@ -79,30 +73,22 @@ def process_chunk_in_parallel(
         while attempt < retries:
             attempt += 1
             try:
-                # Build input data from mapping
                 input_data = {}
                 for key, value in input_key_mapping.items():
-                    if callable(value):
-                        input_data[key] = value(chunk_text)
-                    else:
-                        input_data[key] = value
+                    input_data[key] = value(chunk_text) if callable(value) else value
                 
                 result = chain.invoke(input_data)
-                cleaned = clean_llm_output(result)
+                cleaned = clean_output(result)
                 parsed = json.loads(cleaned) if cleaned else []
                 
                 if isinstance(parsed, list):
-                    logger.debug("Chunk %d: parsed %d items (attempt %d)", idx + 1, len(parsed), attempt)
+                    logger.debug("Chunk %d: parsed %d items", idx + 1, len(parsed))
                     return parsed
-                else:
-                    logger.warning("Chunk %d: parsed non-list result, attempt %d", idx + 1, attempt)
-                    return []
+                return []
             except Exception as e:
                 backoff = 1.5 ** attempt
-                logger.warning("Chunk %d: attempt %d failed: %s. Backing off %.1fs", idx + 1, attempt, e, backoff)
+                logger.warning("Chunk %d: attempt %d failed: %s", idx + 1, attempt, e)
                 time.sleep(backoff)
-        
-        logger.error("Chunk %d: failed after %d attempts", idx + 1, retries)
         return []
 
     all_results = []
@@ -111,13 +97,11 @@ def process_chunk_in_parallel(
     with ThreadPoolExecutor(max_workers=max_workers) as exe:
         futures = {exe.submit(_process_chunk, i, c): i for i, c in enumerate(chunks)}
         for fut in as_completed(futures):
-            idx = futures[fut]
             try:
                 data = fut.result()
                 if data:
                     all_results.extend(data)
-                    logger.info("Chunk %d/%d: Found %d items", idx + 1, len(chunks), len(data))
             except Exception as e:
-                logger.exception("Unhandled error processing chunk %d: %s", idx + 1, e)
+                logger.error("Error processing chunk: %s", e)
 
     return all_results

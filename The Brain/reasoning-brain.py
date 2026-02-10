@@ -25,7 +25,8 @@ def main():
     logger.info("Starting mystery solver...")
     result = solve_mystery(audio_input, document_input, clue_input)
     
-    logger.info("=== CASE CLOSED ===\n%s", result)
+    logger.info("============ CASE CLOSED ============")
+    print(result)
     return result
 
 
